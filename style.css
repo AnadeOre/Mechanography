@@ -1,0 +1,269 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0;
+	background-color: #4da0ff;
+}
+
+body,
+.quote-input {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 23px !important;
+}
+
+.next-quote {
+	background-color: rgb(66, 66, 66);
+	color: white;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	width: 70%;
+	max-width: 50%;
+	display: flex;
+}
+
+.container {
+	background-color: rgb(66, 66, 66);
+	color: white;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	width: 70%;
+	max-width: 90%;
+}
+
+.hidden {
+	display: none;
+}
+
+.quote-display {
+	margin-bottom: 1rem;
+}
+
+.quote-input {
+	background-color: transparent;
+	border: 2px solid #4da0ff;
+	color: white;
+	outline: none;
+	width: 100%;
+	height: 8rem;
+	margin: auto;
+	resize: none;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	border-radius: 0.5rem;
+}
+
+.quote-input:focus {
+	border-color: rgb(47, 80, 226);
+}
+
+.correct {
+	color: #0fe90f;
+}
+.incorrect {
+	color: #ff0000;
+	text-decoration: underline;
+}
+
+
+
+
+.keyboard {
+	margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+	margin: 1px;
+  list-style: none;
+  display: flex;
+}
+
+li {
+  height: 1.4em;
+  width: 1.4em;
+  color: rgba(0,0,0,0.7);
+  border-radius: 0.3em;
+  line-height: 1em;
+  margin: 0.2em;
+  transition: 0.3s;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+#tab {
+  width: 3em;
+}
+
+#esc {
+	width: 2em
+}
+
+#caps {
+  width: 4em;
+}
+
+#left-shift {
+  width: 4.8em;
+}
+
+#enter {
+  width: 3em;
+}
+
+#right-shift {
+  width: 4em;
+}
+
+#back {
+  width: 4em;
+}
+
+.space {
+	height: 1.4em;
+  width: 20em;
+  color: rgba(0,0,0,0.7);
+  border-radius: 0.3em;
+	margin-left: 70px;
+  transition: 0.3s;
+  text-align: center;
+	text-justify: center;
+  font-size: 1em;
+}
+
+.pinky { 
+  background-color: crimson;
+  border: 2px solid crimson;
+}
+.pinky.selected {
+  color: crimson;
+}
+
+.ring { 
+  background-color: coral;
+  border: 2px solid coral;
+}
+.ring.selected {
+  color: coral;
+}
+
+.middle { 
+  background-color: darkorange;
+  border: 2px solid darkorange;
+}
+.middle.selected {
+  color: darkorange;
+}
+
+.pointer1st { 
+  background-color: gold;
+  border: 2px solid gold;
+}
+.pointer1st.selected {
+  color: gold;
+}
+
+.pointer2nd { 
+  background-color: khaki;
+  border: 2px solid khaki;
+}
+.pointer2nd.selected {
+  color: khaki;
+}
+
+.fill-out-key {
+  background-color: slategrey;
+  border: 2px solid slategrey;
+}
+
+.selected {
+  background-color: transparent;
+    -webkit-animation: vibrate-1 0.3s linear infinite both;
+          animation: vibrate-1 0.3s linear infinite both;
+}
+
+.hit {
+  -webkit-animation: hit 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+          animation: hit 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes hit {
+  0% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes hit {
+  0% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
