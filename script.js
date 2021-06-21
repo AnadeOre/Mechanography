@@ -5,7 +5,7 @@ const statsElement = document.getElementById('stats')
 const nextIn = document.getElementsByClassName('next-quote')[0]
 const nextInSeconds = document.getElementById('next-quote-secs')
 
-const quoteURL = 'http://api.quotable.io/random';
+const quoteURL = 'https://api.quotable.io/random';
 
 let wordCount, starTime, letterCount;
 let key = [];
