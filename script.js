@@ -36,12 +36,11 @@ async function renderNextQuote() {
   wordCount = quote.split(' ').length;
   letterCount = quote.split('').length;
   startTime = new Date();
+  key[0].classList.add('selected')
 }
 
 let i = 0
 quoteInputElement.addEventListener('input', (e) => {
-  key[i].classList.add('selected')
-  let correct = true;
   if (e.inputType === 'deleteContentBackward') {
     const keyElement = document.getElementById('back');
     keyElement.classList.add("hit")
@@ -69,22 +68,20 @@ quoteInputElement.addEventListener('input', (e) => {
     if (character == null) {
       charSpan.classList.remove('correct')
       charSpan.classList.remove('incorrect')
-      correct = false
     }
     else if (character === charSpan.innerText) {
       charSpan.classList.add('correct')
       charSpan.classList.remove('incorrect')
       key[i].classList.remove('selected')
-      correct = true;
       i = index + 1;
       key[i].classList.add('selected')
     } else {
       charSpan.classList.remove('correct')
       charSpan.classList.add('incorrect')
-      correct = false
     }
   })
-  if (i === letterCount - 1) {
+  console.log(i, letterCount)
+  if (i + 1 == letterCount) {
     finishGame()
   }
 }
@@ -93,19 +90,19 @@ quoteInputElement.addEventListener('input', (e) => {
 function finishGame() {
   let nextInStartTimer = 10
   const finalTime = new Date
-  const seconds = Math.round((finalTime.getTime() - startTime.getTime()) / 1000)
-  const wps = seconds / wordCount
+  const seconds = (finalTime.getTime() - startTime.getTime()) / 1000
+  const wps = wordCount / seconds
   const wpm = wps * 60;
   statsElement.innerText = `Your WPM was ${Math.floor(wpm)}`
   nextIn.classList.remove('hidden')
   console.log(nextIn)
   console.log(nextIn.classList)
   setInterval(() => {
-    nextInSeconds.value = nextInStartTimer
+    nextInSeconds.innerText = nextInStartTimer
     nextInStartTimer -= 1
   }, 1000)
   setTimeout(() => {
-    renderNextQuote()
+    window.location.reload(true)
   }, 11000)
 }
 
