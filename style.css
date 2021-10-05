@@ -24,8 +24,12 @@ body,
 	padding: 1rem;
 	border-radius: 0.5rem;
 	width: 70%;
-	max-width: 50%;
+	max-width: 20%;
 	display: flex;
+}
+
+.next-quote-secs {
+	margin-left: 10px;
 }
 
 .container {
@@ -71,199 +75,196 @@ body,
 	text-decoration: underline;
 }
 
-
-
-
 .keyboard {
 	margin-top: 20px;
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .row {
 	margin: 1px;
-  list-style: none;
-  display: flex;
+	list-style: none;
+	display: flex;
 }
 
 li {
-  height: 1.4em;
-  width: 1.4em;
-  color: rgba(0,0,0,0.7);
-  border-radius: 0.3em;
-  line-height: 1em;
-  margin: 0.2em;
-  transition: 0.3s;
-  text-align: center;
-  font-size: 0.8em;
+	height: 1.4em;
+	width: 1.4em;
+	color: rgba(0, 0, 0, 0.7);
+	border-radius: 0.3em;
+	line-height: 1em;
+	margin: 0.2em;
+	transition: 0.3s;
+	text-align: center;
+	font-size: 0.8em;
 }
 
 #tab {
-  width: 3em;
+	width: 3em;
 }
 
 #esc {
-	width: 2em
+	width: 2em;
 }
 
 #caps {
-  width: 4em;
+	width: 4em;
 }
 
 #left-shift {
-  width: 4.8em;
+	width: 4.8em;
 }
 
 #enter {
-  width: 3em;
+	width: 3em;
 }
 
 #right-shift {
-  width: 4em;
+	width: 4em;
 }
 
 #back {
-  width: 4em;
+	width: 4em;
 }
 
 .space {
 	height: 1.4em;
-  width: 20em;
-  color: rgba(0,0,0,0.7);
-  border-radius: 0.3em;
+	width: 20em;
+	color: rgba(0, 0, 0, 0.7);
+	border-radius: 0.3em;
 	margin-left: 70px;
-  transition: 0.3s;
-  text-align: center;
+	transition: 0.3s;
+	text-align: center;
 	text-justify: center;
-  font-size: 1em;
+	font-size: 1em;
 }
 
-.pinky { 
-  background-color: crimson;
-  border: 2px solid crimson;
+.pinky {
+	background-color: crimson;
+	border: 2px solid crimson;
 }
 .pinky.selected {
-  color: crimson;
+	color: crimson;
 }
 
-.ring { 
-  background-color: coral;
-  border: 2px solid coral;
+.ring {
+	background-color: coral;
+	border: 2px solid coral;
 }
 .ring.selected {
-  color: coral;
+	color: coral;
 }
 
-.middle { 
-  background-color: darkorange;
-  border: 2px solid darkorange;
+.middle {
+	background-color: darkorange;
+	border: 2px solid darkorange;
 }
 .middle.selected {
-  color: darkorange;
+	color: darkorange;
 }
 
-.pointer1st { 
-  background-color: gold;
-  border: 2px solid gold;
+.pointer1st {
+	background-color: gold;
+	border: 2px solid gold;
 }
 .pointer1st.selected {
-  color: gold;
+	color: gold;
 }
 
-.pointer2nd { 
-  background-color: khaki;
-  border: 2px solid khaki;
+.pointer2nd {
+	background-color: khaki;
+	border: 2px solid khaki;
 }
 .pointer2nd.selected {
-  color: khaki;
+	color: khaki;
 }
 
 .fill-out-key {
-  background-color: slategrey;
-  border: 2px solid slategrey;
+	background-color: slategrey;
+	border: 2px solid slategrey;
 }
 
 .selected {
-  background-color: transparent;
-    -webkit-animation: vibrate-1 0.3s linear infinite both;
-          animation: vibrate-1 0.3s linear infinite both;
+	background-color: transparent;
+	-webkit-animation: vibrate-1 0.3s linear infinite both;
+	animation: vibrate-1 0.3s linear infinite both;
 }
 
 .hit {
-  -webkit-animation: hit 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-          animation: hit 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	-webkit-animation: hit 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+	animation: hit 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 @-webkit-keyframes hit {
-  0% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
+	0% {
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
 }
 @keyframes hit {
-  0% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
+	0% {
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
 }
 
 @-webkit-keyframes vibrate-1 {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  20% {
-    -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
-  }
-  40% {
-    -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
-  }
-  60% {
-    -webkit-transform: translate(2px, 2px);
-            transform: translate(2px, 2px);
-  }
-  80% {
-    -webkit-transform: translate(2px, -2px);
-            transform: translate(2px, -2px);
-  }
-  100% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
+	0% {
+		-webkit-transform: translate(0);
+		transform: translate(0);
+	}
+	20% {
+		-webkit-transform: translate(-2px, 2px);
+		transform: translate(-2px, 2px);
+	}
+	40% {
+		-webkit-transform: translate(-2px, -2px);
+		transform: translate(-2px, -2px);
+	}
+	60% {
+		-webkit-transform: translate(2px, 2px);
+		transform: translate(2px, 2px);
+	}
+	80% {
+		-webkit-transform: translate(2px, -2px);
+		transform: translate(2px, -2px);
+	}
+	100% {
+		-webkit-transform: translate(0);
+		transform: translate(0);
+	}
 }
 @keyframes vibrate-1 {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  20% {
-    -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
-  }
-  40% {
-    -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
-  }
-  60% {
-    -webkit-transform: translate(2px, 2px);
-            transform: translate(2px, 2px);
-  }
-  80% {
-    -webkit-transform: translate(2px, -2px);
-            transform: translate(2px, -2px);
-  }
-  100% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
+	0% {
+		-webkit-transform: translate(0);
+		transform: translate(0);
+	}
+	20% {
+		-webkit-transform: translate(-2px, 2px);
+		transform: translate(-2px, 2px);
+	}
+	40% {
+		-webkit-transform: translate(-2px, -2px);
+		transform: translate(-2px, -2px);
+	}
+	60% {
+		-webkit-transform: translate(2px, 2px);
+		transform: translate(2px, 2px);
+	}
+	80% {
+		-webkit-transform: translate(2px, -2px);
+		transform: translate(2px, -2px);
+	}
+	100% {
+		-webkit-transform: translate(0);
+		transform: translate(0);
+	}
 }

@@ -5,7 +5,7 @@ const statsElement = document.getElementById('stats')
 const nextIn = document.getElementsByClassName('next-quote')[0]
 const nextInSeconds = document.getElementById('next-quote-secs')
 
-const quoteURL = 'https://api.quotable.io/random';
+const quoteURL = 'https://goquotes-api.herokuapp.com/api/v1/random?count=1';
 
 let wordCount, letterCount;
 let key = [];
@@ -13,7 +13,8 @@ let key = [];
 function getRandomQuote() {
   return fetch(quoteURL)
     .then(res => res.json())
-    .then(data => data.content)
+    .then(data => data.quotes[0].text)
+
 }
 async function renderNextQuote() {
   nextIn.classList.add('hidden')
@@ -89,7 +90,7 @@ quoteInputElement.addEventListener('input', (e) => {
 )
 
 function finishGame(startTime) {
-  let nextInStartTimer = 10
+  let nextInStartTimer = 10;
   const finalTime = new Date
   const seconds = (finalTime.getTime() - startTime.getTime()) / 1000
   const wps = wordCount / seconds
@@ -102,7 +103,7 @@ function finishGame(startTime) {
   }, 1000)
   setTimeout(() => {
     window.location.reload(true)
-  }, 11000)
+  }, 16516654)//11000
 }
 
 renderNextQuote()
